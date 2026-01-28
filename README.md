@@ -1,3 +1,10 @@
+# Neural SS-DMP
+
+Structured neural decoding (DMP + subject dynamics) with training, testing, and visualization.
+
+This cleaned repo only includes the M2 dataset.
+
+## Project layout
 ```
 configs/
   default.yaml                  # default training/testing config
@@ -63,3 +70,4 @@ data/M2/000953/
 - Recommended: if `outputs/` is empty, run `cli.py` to train a model first, then run the test script.
 - Model checkpoints (e.g., `last.pt`) are not included due to file-size limits (25MB).
   Run training first to generate `outputs/<run>/last.pt`, then run the test script.
+
