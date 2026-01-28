@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neuralssdmp"
+version = "0.1.0"
+description = "Neural SS-DMP: causal neural decoding with structured DMP constraints"
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
