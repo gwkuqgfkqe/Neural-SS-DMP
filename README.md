@@ -1,4 +1,4 @@
-# NeuroScribe2.0
+# Neural SS-DMP
 
 Structured neural decoding (DMP + subject dynamics) with training, testing, and visualization.
 
