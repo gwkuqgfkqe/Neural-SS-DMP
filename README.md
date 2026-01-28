@@ -60,7 +60,9 @@ data/M2/000953/
 
 ## Notes
 - `test_neuralssdmp_best.py` scans `outputs/` for a sweep folder and picks the best run by **test r2**.
-- If `outputs/` is empty, the script will fall back to a short training run (default 1 epoch) before testing.
+- If no sweep is found, it will look for the newest `last.pt` in the project; if none exists, it falls back to a short training run (default 1 epoch).
+- Recommended: if `outputs/` is empty, run `cli.py` to train a model first, then run the test script.
 - Model checkpoints (e.g., `last.pt`) are not included due to file-size limits (25MB).
   Run training first to generate `outputs/<run>/last.pt`, then run the test script.
+
 
