@@ -2,9 +2,9 @@
 
 Structured neural decoding (DMP + subject dynamics) with training, testing, and visualization.
 
-This cleaned repo only includes the M2 dataset (no Mouse/BCI/H1 data bundled).
+This cleaned repo only includes the M2 dataset.
 
-## Project layout (current repo)
+## Project layout
 ```
 configs/
   default.yaml                  # default training/testing config
@@ -37,6 +37,7 @@ python scripts/test_neuralssdmp_best.py --dataset m2
 
 Outputs:
 ```
+
 outputs/test_best_m2_<timestamp>/
   test_metrics_best.json
   plots/test_full_seq_*.png
