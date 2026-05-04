@@ -14,8 +14,7 @@ README.md
 configs/
   default.yaml                  # Default training and evaluation config
 
-data/
-  M2/000953/                    # M2 dataset location after download
+data/                           # M2 dataset location after download
 
 outputs/
   test_best_m2/
