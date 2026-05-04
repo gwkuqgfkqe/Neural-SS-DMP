@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 """Test the best Neural SS-DMP run (by test r2) for a dataset and render test full-seq viz."""
 
 from __future__ import annotations
@@ -25,11 +24,11 @@ from neuralssdmp.cli import (  # noqa: E402
     _safe_torch_load,
     _save_full_sequence,
 )
-from neuralssdmp.config import load_yaml  # noqa: E402
-from neuralssdmp.data.datamodule import build_datasets  # noqa: E402
-from neuralssdmp.models import NeuralDMPModel  # noqa: E402
-from neuralssdmp.train.trainer import evaluate, get_device, train_one_epoch  # noqa: E402
-from neuralssdmp.utils.seed import set_seed  # noqa: E402
+from neuralssdmp.config import load_yaml
+from neuralssdmp.data.datamodule import build_datasets  
+from neuralssdmp.models import NeuralDMPModel  
+from neuralssdmp.train.trainer import evaluate, get_device, train_one_epoch  
+from neuralssdmp.utils.seed import set_seed 
 
 
 def _set(cfg: dict[str, Any], key: str, value: Any) -> None:
