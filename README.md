@@ -9,11 +9,54 @@ submitted with the manuscript.
 ## Contents
 
 ```text
-configs/default.yaml            # Default training and evaluation config
-scripts/test_neuralssdmp_best.py
+README.md
+
+configs/
+  default.yaml                  # Default training and evaluation config
+
+data/
+  M2/000953/                    # M2 dataset location after download
+
+outputs/
+  test_best_m2/
+    test_metrics_best.json      # Evaluation metrics from the supplied checkpoint
+    plots/
+      test_full_seq_*.png       # Full-sequence prediction plots
+
+scripts/
+  test_neuralssdmp_best.py      # Evaluation script
+
 src/neuralssdmp/
-requirements.txt
-pyproject.toml
+  __init__.py
+  cli.py                        # Training entry point
+  config.py                     # YAML loading and command-line overrides
+  data/
+    __init__.py
+    base.py                     # Dataset base classes
+    datamodule.py               # Dataset assembly, preprocessing, and splits
+    m2.py                       # M2 loader
+    h1.py                       # H1 loader
+    mouse.py                    # Mouse loader
+    bci_iv.py                   # BCI IV loader
+    utils.py                    # Data preprocessing utilities
+  models/
+    __init__.py
+    dmp.py                      # DMP rollout module
+    encoder.py                  # Neural encoders
+    model.py                    # Neural SS-DMP model wrapper
+  train/
+    __init__.py
+    dynamics.py                 # Subject dynamics fitting
+    losses.py                   # Training losses
+    metrics.py                  # Evaluation metrics
+    trainer.py                  # Training and evaluation loops
+    visualizer.py               # Plotting utilities
+  utils/
+    __init__.py
+    seed.py                     # Random seed utility
+
+requirements.txt                # Python dependencies
+pyproject.toml                  # Project metadata
 ```
 
 Empty `data/` and `outputs/` directories may not appear after cloning. Create
